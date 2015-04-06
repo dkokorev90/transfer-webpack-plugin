@@ -1,0 +1,95 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@1.4.23
+3 info using node@v0.10.31
+4 verbose publish [ '.' ]
+5 verbose cache add [ '.', null ]
+6 verbose cache add name=undefined spec="." args=[".",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '.',
+7 verbose parsed url   path: '.',
+7 verbose parsed url   href: '.' }
+8 silly lockFile 3a52ce78- .
+9 verbose lock . /Users/dmkokorev/.npm/3a52ce78-.lock
+10 verbose tar pack [ '/Users/dmkokorev/.npm/transfer-webpack-plugin/0.1.1/package.tgz',
+10 verbose tar pack   '.' ]
+11 verbose tarball /Users/dmkokorev/.npm/transfer-webpack-plugin/0.1.1/package.tgz
+12 verbose folder .
+13 info prepublish transfer-webpack-plugin@0.1.1
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. /Users/dmkokorev/.npm/1f1177db-tar.lock
+16 silly lockFile b8970bbb-webpack-plugin-0-1-1-package-tgz tar:///Users/dmkokorev/.npm/transfer-webpack-plugin/0.1.1/package.tgz
+17 verbose lock tar:///Users/dmkokorev/.npm/transfer-webpack-plugin/0.1.1/package.tgz /Users/dmkokorev/.npm/b8970bbb-webpack-plugin-0-1-1-package-tgz.lock
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile b8970bbb-webpack-plugin-0-1-1-package-tgz tar:///Users/dmkokorev/.npm/transfer-webpack-plugin/0.1.1/package.tgz
+21 silly lockFile b8970bbb-webpack-plugin-0-1-1-package-tgz tar:///Users/dmkokorev/.npm/transfer-webpack-plugin/0.1.1/package.tgz
+22 silly lockFile 7503656c-fer-webpack-plugin-0-1-1-package /Users/dmkokorev/.npm/transfer-webpack-plugin/0.1.1/package
+23 verbose lock /Users/dmkokorev/.npm/transfer-webpack-plugin/0.1.1/package /Users/dmkokorev/.npm/7503656c-fer-webpack-plugin-0-1-1-package.lock
+24 silly lockFile 7503656c-fer-webpack-plugin-0-1-1-package /Users/dmkokorev/.npm/transfer-webpack-plugin/0.1.1/package
+25 silly lockFile 7503656c-fer-webpack-plugin-0-1-1-package /Users/dmkokorev/.npm/transfer-webpack-plugin/0.1.1/package
+26 silly lockFile 3a52ce78- .
+27 silly lockFile 3a52ce78- .
+28 silly publish { name: 'transfer-webpack-plugin',
+28 silly publish   version: '0.1.1',
+28 silly publish   description: 'transfer files to the build directory',
+28 silly publish   main: 'index.js',
+28 silly publish   repository:
+28 silly publish    { type: 'git',
+28 silly publish      url: 'https://github.com/molforp/transfer-webpack-plugin.git' },
+28 silly publish   keywords: [ 'webpack', 'plugin', 'transfer', 'move', 'copy' ],
+28 silly publish   author: { name: 'Dmitry Kokorev' },
+28 silly publish   license: 'MIT',
+28 silly publish   homepage: 'https://github.com/molforp/transfer-webpack-plugin',
+28 silly publish   dependencies: { 'node-dir': '^0.1.6', vow: '^0.4.9' },
+28 silly publish   readme: '## Transfer Webpack Plugin\n\nTransfer files to the build directory\n\n### Getting started\n\nInstall the plugin:\n\n```\nnpm install --save-dev transfer-webpack-plugin\n```\n\n\n### API\n```javascript\nnew TransferWebpackPlugin(patterns: array, [basePath: string])\n```\n\n* `patterns` – array of patterns `{ from: \'path\', to: \'path\' }`, `from` – relative to `basePath` or to `context` of your config (if `basePath` is not exists), \n`to` – relative to the build directory\n* `basePath` (optional) – directory to be resolved to `from` parameter\n\n### Usage\n\n```javascript\nvar TransferWebpackPlugin = require(\'transfer-webpack-plugin\');\n\nmodule.exports = {\n    context: path.join(__dirname, \'app\'),\n    plugins: [\n        new TransferWebpackPlugin([\n            { from: \'i18n\', to: \'i18n\' },\n            { from: \'root\' }\n        ])\n    ]\n};\n\nmodule.exports = {\n    plugins: [\n        new TransferWebpackPlugin([\n            { from: \'i18n\', to: \'i18n\' },\n            { from: \'root\' }\n        ], path.join(__dirname, \'app\'))\n    ]\n};\n```\n',
+28 silly publish   readmeFilename: 'README.md',
+28 silly publish   gitHead: 'bc316b1817023c19e2b9f453863a951ade0bb08b',
+28 silly publish   bugs: { url: 'https://github.com/molforp/transfer-webpack-plugin/issues' },
+28 silly publish   _id: 'transfer-webpack-plugin@0.1.1',
+28 silly publish   scripts: {},
+28 silly publish   _shasum: '9be8e70501ba3ba757f81a8e101683216805f315',
+28 silly publish   _from: '.' }
+29 verbose request where is /transfer-webpack-plugin
+30 verbose request registry https://registry.npmjs.org/
+31 verbose request id 753eb05ca8940047
+32 verbose url raw /transfer-webpack-plugin
+33 verbose url resolving [ 'https://registry.npmjs.org/', './transfer-webpack-plugin' ]
+34 verbose url resolved https://registry.npmjs.org/transfer-webpack-plugin
+35 verbose request where is https://registry.npmjs.org/transfer-webpack-plugin
+36 info trying registry request attempt 1 at 18:11:19
+37 http PUT https://registry.npmjs.org/transfer-webpack-plugin
+38 http 409 https://registry.npmjs.org/transfer-webpack-plugin
+39 verbose request where is /transfer-webpack-plugin?write=true
+40 verbose request registry https://registry.npmjs.org/
+41 verbose url raw /transfer-webpack-plugin?write=true
+42 verbose url resolving [ 'https://registry.npmjs.org/',
+42 verbose url resolving   './transfer-webpack-plugin?write=true' ]
+43 verbose url resolved https://registry.npmjs.org/transfer-webpack-plugin?write=true
+44 verbose request where is https://registry.npmjs.org/transfer-webpack-plugin?write=true
+45 info trying registry request attempt 1 at 18:11:21
+46 http GET https://registry.npmjs.org/transfer-webpack-plugin?write=true
+47 http 200 https://registry.npmjs.org/transfer-webpack-plugin?write=true
+48 error publish fail Cannot publish over existing version.
+48 error publish fail Update the 'version' field in package.json and try again.
+48 error publish fail
+48 error publish fail If the previous version was published in error, see:
+48 error publish fail     npm help unpublish
+48 error publish fail
+48 error publish fail To automatically increment version numbers, see:
+48 error publish fail     npm help version
+49 error System Darwin 14.1.0
+50 error command "node" "/usr/local/bin/npm" "publish"
+51 error cwd /Users/dmkokorev/forme/myprojects/transfer-webpack-plugin
+52 error node -v v0.10.31
+53 error npm -v 1.4.23
+54 error code EPUBLISHCONFLICT
+55 verbose exit [ 1, true ]
