@@ -1,0 +1,24 @@
+{
+  "name": "transfer-webpack-plugin",
+  "version": "0.0.1",
+  "description": "transfer files to the build directory",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/molforp/transfer-webpack-plugin.git"
+  },
+  "keywords": [
+    "webpack",
+    "plugin",
+    "transfer",
+    "move",
+    "copy"
+  ],
+  "author": "Dmitry Kokorev",
+  "license": "MIT",
+  "homepage": "https://github.com/molforp/transfer-webpack-plugin",
+  "devDependencies": {
+    "node-dir": "^0.1.6",
+    "vow": "^0.4.9"
+  }
+}
