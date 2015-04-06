@@ -44,8 +44,6 @@ TransferWebpackPlugin.prototype.processDir = function(from, to, compilation) {
         var fileName = path.basename(filename);
         var distName = to ? path.join(to, fileName) : fileName;
 
-        console.log(distName)
-
         compilation.assets[distName] = {
             source: function() {
                 return content;
