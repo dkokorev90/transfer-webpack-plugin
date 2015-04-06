@@ -1,6 +1,6 @@
 {
   "name": "transfer-webpack-plugin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "transfer files to the build directory",
   "main": "index.js",
   "repository": {
