@@ -17,7 +17,7 @@
   "author": "Dmitry Kokorev",
   "license": "MIT",
   "homepage": "https://github.com/molforp/transfer-webpack-plugin",
-  "devDependencies": {
+  "dependencies": {
     "node-dir": "^0.1.6",
     "vow": "^0.4.9"
   }
