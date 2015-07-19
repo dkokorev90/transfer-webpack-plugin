@@ -41,7 +41,7 @@ TransferWebpackPlugin.prototype.processDir = function(from, to, compilation) {
             return;
         }
 
-        var fileName = path.basename(filename);
+        var fileName = filename.replace(from, '');
         var distName = to ? path.join(to, fileName) : fileName;
 
         compilation.assets[distName] = {
