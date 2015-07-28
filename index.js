@@ -1,6 +1,7 @@
 var path = require('path');
 var dir = require('node-dir');
 var vow = require('vow');
+var fs = require('fs');
 
 function TransferWebpackPlugin(patterns, basePath) {
     this.patterns = patterns || [];
@@ -35,31 +36,27 @@ TransferWebpackPlugin.prototype.apply = function(compiler) {
 TransferWebpackPlugin.prototype.processDir = function(from, to, compilation) {
     var defer = vow.defer();
 
-    dir.readFiles(from, function(err, content, filename, next) {
+    dir.files(from, function(err, files) {
         if (err) {
-            defer.reject('TransferWebpackPlugin: Unable to transfer file: ' + filename);
+            defer.reject('TransferWebpackPlugin: ' + err);
             return;
         }
 
-        var fileName = filename.replace(from, '');
-        var distName = to ? path.join(to, fileName) : fileName;
+        var allFiles = files.map(function(fullPath) {
+            var fileName = path.basename(fullPath);
+            var distName = to ? path.join(to, fileName) : fileName;
 
-        compilation.assets[distName] = {
-            source: function() {
-                return content;
-            },
-            size: function() {
-                return content.length;
-            }
-        };
+            compilation.assets[distName] = {
+                size: function() {
+                    return fs.statSync(fullPath).size;
+                },
+                source: function() {
+                    return fs.readFileSync(fullPath);
+                },
+            };
+        });
 
-        next();
-    }, function(err) {
-        if (err) {
-            defer.reject('TransferWebpackPlugin: ' + err);
-        }
-
-        defer.resolve();
+        defer.resolve(vow.all(allFiles));
     });
 
     return defer.promise();
